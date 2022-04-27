@@ -18,10 +18,6 @@ body {
     justify-content: space-between;
 }
 
-nav {
-
-}
-
 nav ul {
     display: inline-flex;
     list-style-type: none;
