@@ -1,7 +1,21 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 500;
-  src: local('Roboto'), url('Fonts/Roboto-Medium.ttf') format('ttf'),
-    local('Roboto'), url('Fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 400;
+  src: local('Roboto'), url('Fonts/Roboto-Regular.ttf') format('ttf'),
+    local('Roboto'), url('Fonts/Roboto-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto'), url('Fonts/Roboto-Light.ttf') format('ttf'),
+  local('Roboto'), url('Fonts/Roboto-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto'), url('Fonts/Roboto-Bold.ttf') format('ttf'),
+  local('Roboto'), url('Fonts/Roboto-Bold.woff2') format('woff2');
 }
