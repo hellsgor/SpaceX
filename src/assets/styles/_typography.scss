@@ -2,13 +2,42 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #ffffff;
+  color: $text;
   font-size: 16px;
-  line-height: 100%;
-  letter-spacing: -0.07em;
+  line-height: 180%;
 }
 
-h1 {
-  font-size: 80px;
-  line-height: 100%;
+h1,
+.heading-1{
+  font-size: 64px;
+  line-height: 117%;
+}
+
+.subheading-1 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.nav-items {
+  line-height: 117%;
+  &_small {
+    font-size: 12px;
+  }
+  &_big {
+    font-size: 18px;
+  }
+
+}
+
+.characteristic {
+  font-size: 18px;
+  line-height: 179.69%;
 }
