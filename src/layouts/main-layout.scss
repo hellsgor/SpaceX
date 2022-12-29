@@ -7,8 +7,8 @@ body {
   height: 100%;
 }
 
-body {
-  background-color: black;
+.page__body {
+  background-color: $backgroundColor;
   display: flex;
   flex-direction: column;
 }
