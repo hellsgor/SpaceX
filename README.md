@@ -80,4 +80,4 @@ pet-project
 
 ## <a name='pages'>Список страниц</a>
 
-main page - http://localhost:3000
+- main page - http://localhost:3000
