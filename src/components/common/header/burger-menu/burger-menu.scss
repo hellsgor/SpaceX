@@ -1,0 +1,56 @@
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: $burgerMenuBgColor;
+  @include transition-300ms(right);
+
+  &_hidden {
+    right: -400px;
+    @include transition-300ms(right);
+  }
+
+  &__close-btn {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tabletLandscape {
+      right: 16px;
+      top: 30px;
+    }
+
+    @include smartphone {
+      right: 8px;
+      top: 22px;
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tabletLandscape {
+      padding: 32px 0 32px;
+    }
+
+    @include smartphone {
+      padding: 24px 0 24px;
+    }
+  }
+
+  @include smartphone {
+    width: 260px;
+  }
+}

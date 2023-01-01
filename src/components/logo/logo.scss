@@ -1,0 +1,11 @@
+.logo {
+  width: 139px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    @include active;
+  }
+}

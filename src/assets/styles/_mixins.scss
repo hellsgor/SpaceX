@@ -1,0 +1,11 @@
+@mixin active {
+  opacity: 0.5;
+}
+
+@mixin a-hover {
+  text-decoration: underline;
+}
+
+@mixin transition-300ms($property) {
+  transition: $property ease-in-out 0.3s;
+}
