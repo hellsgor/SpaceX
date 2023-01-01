@@ -1,6 +1,28 @@
 @import 'Styles/_reset.scss';
 @import 'Styles/_fonts.scss';
 @import 'Styles/_variables.scss';
+@import 'Styles/_breakpoints.scss';
 @import 'Styles/_mixins.scss';
 @import 'Styles/_indents.scss';
 @import 'Styles/_typography.scss';
+
+.container {
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+
+  @include tabletLarge {
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  @include tabletLandscape {
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  @include smartphone {
+    max-width: none;
+    padding: 0 8px;
+  }
+}
