@@ -1,9 +1,56 @@
+@import 'Components/logo/logo.scss';
+@import './burger-menu-button/burger-menu-button';
+@import './burger-menu/burger-menu.scss';
+
 .header {
-  width: 100%;
-  padding: 20px 0;
-  span {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
+
+  &__inner {
+    margin: 53px 0 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tabletPortrait {
+      margin: 32px 0 32px;
+    }
+
+    @include smartphone {
+      margin: 24px 0 24px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @include tabletPortrait {
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+
+  &__nav-item {
+    @media (hover: hover) {
+      &:hover {
+        @include a-hover;
+      }
+    }
+
+    &:active {
+      @include active;
+    }
+  }
+
+  &__center-nav {
+    @include tabletPortrait {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__right-nav{
+    a {
+      color: $secondaryText;
+    }
   }
 }

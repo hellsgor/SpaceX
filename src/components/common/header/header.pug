@@ -1,1 +1,15 @@
 header.header
+  .container
+    nav.header__inner
+      include Components/logo/logo.pug
+      .header__center-nav.header__nav
+        -  let centerNavItems = ['Falcon 9', 'Falcon Heavy', 'Dragon', 'Updates'];
+        each centerItem in centerNavItems
+           a.header__nav-item.nav-item(href='./')= centerItem
+      .header__right-nav.header__nav
+        - let rightNavItems = ['About', 'Gallery', 'Shop']
+        each rightItem in rightNavItems
+          a.header__nav-item.nav-item(href='./')= rightItem
+      include ./burger-menu-button/burger-menu-button
+      include ./burger-menu/burger-menu.pug
+
