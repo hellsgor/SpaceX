@@ -1,0 +1,39 @@
+// Smartphones (portrait view)
+$maxSmartphoneWidth: 576px;
+@mixin smartphone {
+  @media (max-width: $maxSmartphoneWidth) {
+    @content;
+  }
+}
+
+// Tablet (portrait view)
+$maxTabletPortraitWidth: 768px;
+@mixin tabletPortrait {
+  @media (max-width: $maxTabletPortraitWidth) {
+    @content
+  }
+}
+
+// Tablet (landscape view)
+$maxTabletLandscapeWidth: 1024px;
+@mixin tabletLandscape {
+  @media (max-width: $maxTabletLandscapeWidth) {
+    @content;
+  }
+}
+
+// Large tablet
+$maxTabletLargeWidth: 1200px;
+@mixin tabletLarge {
+  @media (max-width: $maxTabletLargeWidth) {
+    @content;
+  }
+}
+
+// Desktop & Large tablet (landscape view)
+$minDesktopWidth: 1201px;
+@mixin desktop {
+  @media (min-width: $minDesktopWidth) {
+    @content;
+  }
+}
