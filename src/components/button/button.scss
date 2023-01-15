@@ -1,0 +1,24 @@
+.button {
+  background-color: $backgroundColor;
+  padding: 20px 84px;
+  border: 2px $white solid;
+  border-radius: 6px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include transition-300ms(all);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $white;
+      color: $backgroundColor;
+      @include transition-300ms(all);
+    }
+  }
+
+  &:active {
+    @include active;
+  }
+}
