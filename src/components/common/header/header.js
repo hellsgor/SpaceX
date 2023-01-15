@@ -17,14 +17,18 @@ const centerNav = document.querySelector('.header__center-nav');
 window.addEventListener('resize', () => {
   console.log('resize');
   if (isMediaQuery(mediaQueryTabletPortrait)) {
+    console.log(isMediaQuery(mediaQueryTabletPortrait));
     movingElementsInBurger();
   } else {
+    console.log(isMediaQuery(mediaQueryTabletPortrait));
     movingElementsFromBurger();
   }
 })
 
 window.addEventListener('DOMContentLoaded', () => {
-  movingElementsInBurger(rightNav, centerNav);
+  if (isMediaQuery(mediaQueryTabletPortrait)) {
+    movingElementsInBurger();
+  }
 })
 
 
