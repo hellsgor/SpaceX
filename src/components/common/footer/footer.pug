@@ -1,2 +1,21 @@
 footer.footer
-  span This is a footer
+  .container
+    .footer__inner
+      .footer__logo
+        include Components/logo/logo.pug
+      .footer__social
+        a.footer__social-item.nav-item_big(href='https://twitter.com') Twitter
+        a.footer__social-item.nav-item_big(href='https://www.youtube.com') Youtube
+        a.footer__social-item.nav-item_big(href='https://www.instagram.com') Instagram
+        a.footer__social-item.nav-item_big(href='https://www.flickr.com') Flickr
+        a.footer__social-item.nav-item_big(href='https://www.linkedin.com/') LinkedIn
+        a.footer__social-item.nav-item_big(href='./') Privacy
+        a.footer__social-item.nav-item_big(href='./') Policy
+      .footer__for-questions
+        span For additional questions, contact&nbsp;
+          a(href='mailto:rideshare@spacex.com') rideshare@spacex.com
+      .footer__contact
+        include Components/button/button.pug
+        +button ('Contact us', './')
+
+

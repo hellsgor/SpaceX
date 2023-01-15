@@ -1,9 +1,77 @@
+@import 'Components/button/button.scss';
+
 .footer {
-  width: 100%;
-  padding: 20px 0;
-  span {
+  margin: 120px 0;
+
+  &__inner {
     width: 100%;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 28px;
+
+    @include smartphone {
+    }
+  }
+
+  &__logo {
+    margin-bottom: 16px;
+  }
+
+  &__social {
+    display: flex;
+    column-gap: 20px;
+
+    @include smartphone {
+      flex-wrap: wrap;
+      column-gap: 28px;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px;
+    }
+  }
+
+  &__social-item {
+    @media (hover: hover) {
+      &:hover {
+        @include a-hover;
+      }
+    }
+
+    &:active {
+      @include active;
+    }
+  }
+
+  &__for-questions {
+    color: $secondaryText;
+
+
+    a {
+      @media (hover: hover) {
+        &:hover {
+          @include a-hover;
+        }
+      }
+
+      &:active {
+        @include active;
+      }
+    }
+
+    @include smartphone {
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  @include  smartphone {
+    margin: 100px 0;
   }
 }
