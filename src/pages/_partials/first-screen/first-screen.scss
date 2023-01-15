@@ -1,0 +1,35 @@
+.first-screen {
+  margin-top: 120px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 60px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 26px;
+
+    p {
+      width: 100%;
+      max-width: 268px;
+      text-align: center;
+    }
+  }
+
+  &__line {
+    width: 1px;
+    height: 60px;
+    background-color: $white;
+  }
+
+  &__parallax-inner {
+    position: relative;
+  }
+}

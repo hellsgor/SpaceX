@@ -51,6 +51,7 @@ module.exports = {
       Layouts: path.join(__dirname, './src/layouts/'),
       Styles: path.join(__dirname, './src/assets/styles/'),
       Libs: path.join(__dirname, './src/libs/'),
+      Partials: path.join(__dirname, './src/pages/_partials/'),
       NodeModules: path.join(__dirname, './node_modules/'),
       Utils: path.join(__dirname, './src/utils/'),
       Mixins: path.join(__dirname, './src/assets/pug/mixins/'),
