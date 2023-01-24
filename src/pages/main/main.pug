@@ -14,5 +14,8 @@ block content
     include Partials/first-screen/first-screen.pug
     include Partials/second-screen/second-screen.pug
 
+    .some-stars
+      include Components/stars/stars.pug
+
 block scripts
   script(src=require('./main.js') defer)
