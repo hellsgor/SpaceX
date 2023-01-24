@@ -2,8 +2,11 @@ import characteristics from 'JSON/characteristics.json';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  const rocket = document.querySelector('.second-screen__rocket');
+
   characteristicsFilling();
-  rocketPositioning();
+  rocketPositioning(rocket);
+  rocketEffect(rocket);
 
 })
 
@@ -20,7 +23,18 @@ function characteristicsFilling() {
   }
 }
 
-function rocketPositioning() {
+function rocketPositioning(rocket) {
   const rocketRight = (window.innerWidth - document.querySelector('.second-screen .container').offsetWidth) / 2;
-  document.querySelector('.second-screen__rocket').style.right = `${rocketRight}px`;
+  rocket.style.right = `${rocketRight}px`;
+}
+
+function rocketEffect(rocket) {
+  const startScale = 0.3;
+
+  rocket.setAttribute('style', `transform: scale(${startScale})`);
+
+  document.addEventListener('scroll', () => {
+    let scale = (window.scrollY * startScale) / 400;
+    rocket.setAttribute('style', `transform: scale(${scale}) translateY(-50%)`);
+  })
 }

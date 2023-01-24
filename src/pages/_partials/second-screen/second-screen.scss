@@ -1,5 +1,4 @@
 .second-screen {
-
   padding: 512px 0;
   position: relative;
 
@@ -28,7 +27,8 @@
     max-width: 644px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
     img {
       width: 100%;
