@@ -1,0 +1,75 @@
+.second-screen {
+
+  padding: 512px 0;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 218px;
+    width: 100%;
+    max-width: 506px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+  }
+
+  &__block-title {
+    width: 100%;
+    max-width: 176px;
+    text-transform: uppercase;
+  }
+
+  &__rocket {
+    width: 100%;
+    max-width: 644px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      max-width: 644px;
+    }
+  }
+}
+
+.characteristics {
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__name {
+    width: 100%;
+    max-width: 288px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__metr {
+    &:after {
+      content: '/';
+      margin: 0 6px;
+    }
+  }
+
+  &__lat {
+    color: $americanSystemOfMeasurement;
+  }
+
+}
