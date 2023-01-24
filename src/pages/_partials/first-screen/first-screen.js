@@ -3,8 +3,8 @@ const element = inner.querySelector('.first-screen__parallax-elem');
 const body = document.querySelector('body');
 
 body.addEventListener("mousemove", (evt) => {
-  const stepScale = 4000;
-  const stepMove = 2.5;
+  const stepScale = 1000;
+  const stepMove = 5;
 
   const clientX = evt.clientX - body.getBoundingClientRect().left - (0.5 * body.offsetWidth);
 
