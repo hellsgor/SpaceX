@@ -10,8 +10,8 @@ export const minDesktopWidth = 1201;
 export const mediaQuerySmartphone = window.matchMedia(`(max-width: ${maxSmartphoneWidth}px)`);
 export const mediaQueryTabletPortrait = window.matchMedia(`(max-width: ${maxTabletPortraitWidth}px)`);
 export const mediaQueryTabletLandscape = window.matchMedia(`(max-width: ${maxTabletLandscapeWidth}px)`);
-export const mediaQueryTabletLarge = window.matchMedia(`max-width: ${maxTabletLargeWidth}px)`);
-export const mediaQueryDesktop = window.matchMedia(`min-width: ${minDesktopWidth}px)`);
+export const mediaQueryTabletLarge = window.matchMedia(`(max-width: ${maxTabletLargeWidth}px)`);
+export const mediaQueryDesktop = window.matchMedia(`(min-width: ${minDesktopWidth}px)`);
 
 // Burger Menu
 export const burgerBtn = document.querySelector('.burger-menu-icon');

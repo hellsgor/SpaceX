@@ -15,12 +15,9 @@ const rightNav = document.querySelector('.header__right-nav');
 const centerNav = document.querySelector('.header__center-nav');
 
 window.addEventListener('resize', () => {
-  console.log('resize');
   if (isMediaQuery(mediaQueryTabletPortrait)) {
-    console.log(isMediaQuery(mediaQueryTabletPortrait));
     movingElementsInBurger();
   } else {
-    console.log(isMediaQuery(mediaQueryTabletPortrait));
     movingElementsFromBurger();
   }
 })

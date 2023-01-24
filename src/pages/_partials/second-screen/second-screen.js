@@ -1,4 +1,6 @@
 import characteristics from 'JSON/characteristics.json';
+import {isMediaQuery} from "Utils/isMediaQuery";
+import {mediaQueryDesktop} from "Utils/variables";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -6,7 +8,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   characteristicsFilling();
   rocketPositioning(rocket);
-  rocketEffect(rocket);
+
+  if (isMediaQuery(mediaQueryDesktop)) {
+    rocketEffect(rocket);
+  }
+
 
 })
 
