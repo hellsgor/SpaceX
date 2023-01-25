@@ -41,6 +41,6 @@ function rocketEffect(rocket) {
 
   document.addEventListener('scroll', () => {
     let scale = (window.scrollY * startScale) / 400;
-    rocket.setAttribute('style', `transform: scale(${scale}) translateY(-50%)`);
+    rocket.setAttribute('style', `transform: scale(${scale}) translate(-20%, -50%)`);
   })
 }
