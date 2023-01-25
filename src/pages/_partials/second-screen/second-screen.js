@@ -1,18 +1,39 @@
 import characteristics from 'JSON/characteristics.json';
 import {isMediaQuery} from "Utils/isMediaQuery";
-import {mediaQueryDesktop} from "Utils/variables";
+import {mediaQueryDesktop, mediaQueryTabletLarge, mediaQueryTabletLandscape, mediaQueryTabletPortrait} from "Utils/variables";
 
 window.addEventListener('DOMContentLoaded', () => {
 
   const rocket = document.querySelector('.second-screen__rocket');
 
-  characteristicsFilling();
-  rocketPositioning(rocket);
+  let translateX;
+  let translateY;
+  let scaleDivider;
 
   if (isMediaQuery(mediaQueryDesktop)) {
-    rocketEffect(rocket);
+    translateX = '-25%';
+    translateY = '-100%';
+    scaleDivider = 1000;
+  }
+  if(isMediaQuery(mediaQueryTabletLarge)) {
+    translateX = '-10%';
+    translateY = '-100%';
+    scaleDivider = 1000;
+  }
+  if(isMediaQuery(mediaQueryTabletLandscape)) {
+    translateX = '40%';
+    translateY = '-100%';
+    scaleDivider = 1000;
+  }
+  if(isMediaQuery(mediaQueryTabletPortrait)) {
+    translateX = '70%';
+    translateY = '-100%';
+    scaleDivider = 1000;
   }
 
+  characteristicsFilling();
+  rocketPositioning(rocket);
+  rocketEffect(rocket, translateX, translateY, scaleDivider);
 
 })
 
@@ -34,13 +55,13 @@ function rocketPositioning(rocket) {
   rocket.style.right = `${rocketRight}px`;
 }
 
-function rocketEffect(rocket) {
+function rocketEffect(rocket, x, y, divider) {
   const startScale = 0.3;
 
   rocket.setAttribute('style', `transform: scale(${startScale})`);
 
   document.addEventListener('scroll', () => {
-    let scale = (window.scrollY * startScale) / 400;
-    rocket.setAttribute('style', `transform: scale(${scale}) translate(-20%, -50%)`);
+    let scale = (window.scrollY * startScale) / divider;
+    rocket.setAttribute('style', `transform: scale(${scale}) translate(${x}, ${y})`);
   })
 }

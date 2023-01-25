@@ -8,9 +8,13 @@ body {
 }
 
 h1,
-.heading-1{
+.heading-1 {
   font-size: 64px;
   line-height: 117%;
+
+  @include smartphone {
+    text-align: center;
+  }
 }
 
 .subheading-1 {
@@ -40,4 +44,8 @@ h3 {
 .characteristic {
   font-size: 18px;
   line-height: 179.69%;
+
+  @include smartphone {
+    line-height: 100%;
+  }
 }

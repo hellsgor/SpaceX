@@ -2,3 +2,7 @@
 @import 'Partials/first-screen/first-screen.scss';
 @import 'Partials/second-screen/second-screen.scss';
 @import 'Components/stars/stars.scss';
+
+.main-page {
+  overflow: hidden;
+}

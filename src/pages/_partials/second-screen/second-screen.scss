@@ -1,6 +1,18 @@
 .second-screen {
-  padding: 512px 0;
+  padding: 320px 0;
   position: relative;
+
+  @include tabletLandscape {
+    padding: 180px 0;
+  }
+
+  @include tabletLarge {
+    padding: 200px 0;
+  }
+
+  @include smartphone {
+    padding: 160px 0 80px;
+  }
 
   &__inner {
     display: flex;
@@ -8,6 +20,10 @@
     row-gap: 218px;
     width: 100%;
     max-width: 506px;
+
+    @include tabletLandscape {
+      max-width: 460px;
+    }
   }
 
   &__block {
@@ -34,6 +50,15 @@
       width: 100%;
       max-width: 644px;
     }
+
+    @include tabletLarge {
+      max-width: 500px;
+      transform: translate(13%, -50%);
+    }
+
+    @include tabletLandscape {
+      transform: translate(29%, -50%);
+    }
   }
 }
 
@@ -43,28 +68,50 @@
     display: flex;
     flex-direction: column;
     row-gap: 11px;
+
+    @include smartphone {
+      row-gap: 32px;
+    }
   }
 
   &__row {
     display: flex;
     align-items: baseline;
+
+    @include smartphone {
+      flex-direction: column;
+      row-gap: 4px;
+    }
   }
 
   &__name {
     width: 100%;
     max-width: 288px;
     text-transform: uppercase;
+
+    @include tabletLandscape {
+      max-width: 240px;
+    }
   }
 
   &__item {
     display: flex;
     align-items: baseline;
+
+    @include smartphone {
+      font-weight: 300;
+      font-size: 13px;
+    }
   }
 
   &__metr {
     &:after {
       content: '/';
       margin: 0 6px;
+    }
+
+    @include smartphone {
+      color: $americanSystemOfMeasurement;
     }
   }
 
